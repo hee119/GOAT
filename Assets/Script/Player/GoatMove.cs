@@ -13,6 +13,8 @@ public class GoatMove : MonoBehaviour
     private int groundLayer;
     private bool canJump;
     private RaycastHit hit;
+    public float fallThreshold;
+    public GameObject spawnPoint;
     void Awake()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -31,6 +33,12 @@ public class GoatMove : MonoBehaviour
         vertical = new Vector3(0, Mathf.Max(playerRb.linearVelocity.y, -playerMaxGravityForce),  0);
         playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, vertical.y, playerRb.linearVelocity.z);
         Debug.DrawRay(transform.position, Vector3.down * playerJumpDistance, Color.red);
+
+        if (transform.position.y < fallThreshold)
+        {
+            transform.position = spawnPoint.transform.position;
+            playerRb.linearVelocity = Vector3.zero;
+        }
         
     }
 
@@ -56,4 +64,6 @@ public class GoatMove : MonoBehaviour
         }
         return false;
     }
+    
+    
 }
