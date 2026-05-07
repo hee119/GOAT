@@ -210,5 +210,7 @@ public class GoatMove : MonoBehaviour
 
             yield return null;
         }
+
+        goatTransform.transform.position = new Vector3(goatTransform.transform.position.x, goatTransform.transform.position.y, 0);
     }
 }

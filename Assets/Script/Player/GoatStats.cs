@@ -8,6 +8,9 @@ public class GoatStats : MonoBehaviour
     public TextMeshProUGUI dieText;
     public GameObject reSpawnButton;
     private string _lastAttackEnemyName;
+    
+    [Header("Die Animation")]
+    public Animator animator;
 
     void Awake()
     {
@@ -31,7 +34,7 @@ public class GoatStats : MonoBehaviour
 
     public void Die()
     {
-        Time.timeScale = 0;
+        animator.SetBool("IsLived", false);
         dieText.enabled = true;
         reSpawnButton.SetActive(true);
         dieText.text = $"{_lastAttackEnemyName} is kill you";
@@ -40,6 +43,7 @@ public class GoatStats : MonoBehaviour
 
     public void Respawn()
     {
+        animator.SetBool("IsLived", true);
         Time.timeScale = 1; 
         dieText.enabled = false;
         reSpawnButton.SetActive(false);

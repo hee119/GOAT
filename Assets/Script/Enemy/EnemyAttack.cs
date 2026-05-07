@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
    {
       gameObject.SetActive(false);
    }
-   void OnCollisionEnter(Collision collision)
+   void OnCollisionEnter2D(Collision2D collision)
    {
       if (collision.gameObject.CompareTag("Player"))
       {
