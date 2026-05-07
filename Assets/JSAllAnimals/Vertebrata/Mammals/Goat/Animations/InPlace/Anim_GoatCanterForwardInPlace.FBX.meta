@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: a9fd9ed7f4732ba41b11200fd7e6e835
+timeCreated: 1549434216
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Antler_L
+    100004: Antler_R
+    100006: Belly_L
+    100008: Belly_R
+    100010: Breast
+    100012: Calf_L
+    100014: Calf_R
+    100016: Clavicle_L
+    100018: Clavicle_R
+    100020: Ear_L
+    100022: Ear_R
+    100024: Eye_L
+    100026: Eye_R
+    100028: Finger.00_L
+    100030: Finger.00_R
+    100032: Finger.10_L
+    100034: Finger.10_R
+    100036: Foot_L
+    100038: Foot_R
+    100040: Forearm_L
+    100042: Forearm_R
+    100044: GoatDummy
+    100046: Hand_L.1
+    100048: Hand_L.2
+    100050: Hand_R.1
+    100052: Hand_R.2
+    100054: Head
+    100056: HorseLink_L
+    100058: HorseLink_R
+    100060: Joe
+    100062: Joe_L
+    100064: Joe_R
+    100066: LowerEyelid_L
+    100068: LowerEyelid_R
+    100070: Mouth_L.001
+    100072: Mouth_R.001
+    100074: Neck.1
+    100076: Neck.2
+    100078: Neck.3
+    100080: Neck.4
+    100082: Nose_L
+    100084: Nose_L.001
+    100086: Nose_R
+    100088: Nose_R.001
+    100090: Pelvis
+    100092: Root
+    100094: Spine.1
+    100096: Spine.2
+    100098: Spine.3
+    100100: Tail.1
+    100102: Tail.2
+    100104: Thigh_L
+    100106: Thigh_R
+    100108: Toe.0_L
+    100110: Toe.0_R
+    100112: Toe.1_L
+    100114: Toe.1_R
+    100116: Tongue.003
+    100118: Tongue.1
+    100120: Tongue.2
+    100122: UpperArm_L
+    100124: UpperArm_R
+    100126: UpperEyelid_L
+    100128: UpperEyelid_R
+    400000: //RootNode
+    400002: Antler_L
+    400004: Antler_R
+    400006: Belly_L
+    400008: Belly_R
+    400010: Breast
+    400012: Calf_L
+    400014: Calf_R
+    400016: Clavicle_L
+    400018: Clavicle_R
+    400020: Ear_L
+    400022: Ear_R
+    400024: Eye_L
+    400026: Eye_R
+    400028: Finger.00_L
+    400030: Finger.00_R
+    400032: Finger.10_L
+    400034: Finger.10_R
+    400036: Foot_L
+    400038: Foot_R
+    400040: Forearm_L
+    400042: Forearm_R
+    400044: GoatDummy
+    400046: Hand_L.1
+    400048: Hand_L.2
+    400050: Hand_R.1
+    400052: Hand_R.2
+    400054: Head
+    400056: HorseLink_L
+    400058: HorseLink_R
+    400060: Joe
+    400062: Joe_L
+    400064: Joe_R
+    400066: LowerEyelid_L
+    400068: LowerEyelid_R
+    400070: Mouth_L.001
+    400072: Mouth_R.001
+    400074: Neck.1
+    400076: Neck.2
+    400078: Neck.3
+    400080: Neck.4
+    400082: Nose_L
+    400084: Nose_L.001
+    400086: Nose_R
+    400088: Nose_R.001
+    400090: Pelvis
+    400092: Root
+    400094: Spine.1
+    400096: Spine.2
+    400098: Spine.3
+    400100: Tail.1
+    400102: Tail.2
+    400104: Thigh_L
+    400106: Thigh_R
+    400108: Toe.0_L
+    400110: Toe.0_R
+    400112: Toe.1_L
+    400114: Toe.1_R
+    400116: Tongue.003
+    400118: Tongue.1
+    400120: Tongue.2
+    400122: UpperArm_L
+    400124: UpperArm_R
+    400126: UpperEyelid_L
+    400128: UpperEyelid_R
+    7400000: CanterForwardInPlace
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CanterForwardInPlace
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoatDummy
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Belly_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Belly_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Breast
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L.1/Hand_L.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L.1/Hand_L.2/Finger.00_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_L/UpperArm_L/Forearm_L/Hand_L.1/Hand_L.2/Finger.10_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R.1/Hand_R.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R.1/Hand_R.2/Finger.00_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Clavicle_R/UpperArm_R/Forearm_R/Hand_R.1/Hand_R.2/Finger.10_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Antler_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Antler_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Ear_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Ear_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Eye_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Eye_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe/Joe_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe/Joe_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe/Tongue.1
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe/Tongue.1/Tongue.2
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Joe/Tongue.1/Tongue.2/Tongue.003
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/LowerEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/LowerEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Mouth_L.001
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Mouth_R.001
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Nose_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Nose_L.001
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Nose_R
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/Nose_R.001
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/UpperEyelid_L
+        weight: 1
+      - path: Root/Pelvis/Spine.1/Spine.2/Spine.3/Neck.1/Neck.2/Neck.3/Neck.4/Head/UpperEyelid_R
+        weight: 1
+      - path: Root/Pelvis/Tail.1
+        weight: 1
+      - path: Root/Pelvis/Tail.1/Tail.2
+        weight: 1
+      - path: Root/Pelvis/Thigh_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/HorseLink_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/HorseLink_L/Foot_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/HorseLink_L/Foot_L/Toe.0_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_L/Calf_L/HorseLink_L/Foot_L/Toe.1_L
+        weight: 1
+      - path: Root/Pelvis/Thigh_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/HorseLink_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/HorseLink_R/Foot_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/HorseLink_R/Foot_R/Toe.0_R
+        weight: 1
+      - path: Root/Pelvis/Thigh_R/Calf_R/HorseLink_R/Foot_R/Toe.1_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Animations/InPlace/Anim_GoatCanterForwardInPlace.FBX
+  uploadId: 815840

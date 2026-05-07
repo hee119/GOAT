@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3063c57d2e851994c85d8f846df7022c
+timeCreated: 1549451819
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Demo/Scripts/GoatUserController.cs
+  uploadId: 815840

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a42f52e4a3b4e7a48ba814920f196a55
+timeCreated: 1549430877
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Demo/Animators/GoatAC.controller
+  uploadId: 815840

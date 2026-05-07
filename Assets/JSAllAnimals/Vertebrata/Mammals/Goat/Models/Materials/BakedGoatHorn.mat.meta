@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3cd09de00f5223b48b3340091ef6bc8e
+timeCreated: 1549434290
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Models/Materials/BakedGoatHorn.mat
+  uploadId: 815840

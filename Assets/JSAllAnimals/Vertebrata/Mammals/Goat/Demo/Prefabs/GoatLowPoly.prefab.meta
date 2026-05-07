@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c1812b32b5ef3540a56e14857719ce9
+timeCreated: 1564310698
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Demo/Prefabs/GoatLowPoly.prefab
+  uploadId: 815840

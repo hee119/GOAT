@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cfab2d6e94af35546b06d999b6f0f56a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Scripts/AnimalUserController.cs
+  uploadId: 815840

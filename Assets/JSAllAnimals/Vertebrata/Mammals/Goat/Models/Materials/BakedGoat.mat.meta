@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d07202eed74e624e8e2daa36c0a461d
+timeCreated: 1549430839
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Models/Materials/BakedGoat.mat
+  uploadId: 815840

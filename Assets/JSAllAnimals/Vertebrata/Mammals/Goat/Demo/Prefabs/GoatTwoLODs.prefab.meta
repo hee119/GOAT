@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b853e07c5fc701c478c0e2b7fd8d4d14
+timeCreated: 1564310693
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139092
+  packageName: Saanen goat
+  packageVersion: 1.0.1
+  assetPath: Assets/JSAllAnimals/Vertebrata/Mammals/Goat/Demo/Prefabs/GoatTwoLODs.prefab
+  uploadId: 815840

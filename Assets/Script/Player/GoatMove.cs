@@ -1,91 +1,137 @@
-using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class GoatMove : MonoBehaviour
 {
     private Vector2 playerInput;
-    private Rigidbody playerRb;
+    private Rigidbody2D playerRb;
+
+    [Header("Move")]
     public float playerSpeed;
     public float playerJumpForce;
-    public float playerJumpDistance;
     public float playerMaxGravityForce;
-    private Vector3 horizental;
-    private Vector3 vertical;
+
+    [Header("Ground Check")]
+    public float playerJumpDistance;
     private int groundLayer;
-    private bool canJump;
-    private RaycastHit hit;
+
+    [Header("Fall")]
     public float fallThreshold;
     public GameObject spawnPoint;
+
+    [Header("Crazy Effect")]
     public float goatCrageTime;
     public float goatCragePosition = 1.5f;
     public float goatCrageRotation = 0.1f;
+
+    private bool isRespawning = false;
+
     void Awake()
     {
-        playerRb = GetComponent<Rigidbody>();
+        playerRb = GetComponent<Rigidbody2D>();
     }
+
     void Start()
     {
         groundLayer = LayerMask.GetMask("Ground");
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (IsGrounded()){
-            horizental = new Vector3(playerInput.x * playerSpeed, 0,  playerInput.y * playerSpeed);
-            playerRb.AddForce(horizental, ForceMode.Acceleration);
-        }
-        
-        
+        Move();
+        LimitFallSpeed();
 
-        vertical = new Vector3(0, Mathf.Max(playerRb.linearVelocity.y, -playerMaxGravityForce),  0);
-        playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, vertical.y, playerRb.linearVelocity.z);
-        Debug.DrawRay(transform.position, Vector3.down * playerJumpDistance, Color.red);
+        Debug.DrawRay(transform.position, Vector2.down * playerJumpDistance, Color.red);
 
-        if (transform.position.y < fallThreshold)
+        if (transform.position.y < fallThreshold && !isRespawning)
         {
-            StartCoroutine(GoatGoingCrage());
-            transform.position = spawnPoint.transform.position;
-            playerRb.linearVelocity = Vector3.zero;
+            StartCoroutine(RespawnRoutine());
         }
-        
+    }
+
+    void Move()
+    {
+        if (IsGrounded())
+        {
+            Vector2 moveForce = new Vector2(playerInput.x * playerSpeed, 0);
+
+            playerRb.AddForce(moveForce);
+        }
+    }
+
+    void LimitFallSpeed()
+    {
+        playerRb.linearVelocity = new Vector2(
+            playerRb.linearVelocity.x,
+            Mathf.Max(playerRb.linearVelocity.y, -playerMaxGravityForce)
+        );
     }
 
     public void OnMove(InputValue value)
     {
         playerInput = value.Get<Vector2>();
-        Debug.Log(playerInput.ToString());
     }
 
     public void OnJump(InputValue value)
     {
         if (value.isPressed && IsGrounded())
         {
-            playerRb.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector2.up * playerJumpForce, ForceMode2D.Impulse);
         }
     }
 
     bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, playerJumpDistance, groundLayer))
-        {
-            return true;
-        }
-        return false;
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position,
+            Vector2.down,
+            playerJumpDistance,
+            groundLayer
+        );
+
+        return hit.collider != null;
     }
 
-    IEnumerator GoatGoingCrage()
+    IEnumerator RespawnRoutine()
     {
-        Debug.Log("Going crage");
-        float t = 0;   
-        while (goatCrageTime > t)
+        isRespawning = true;
+
+        Debug.Log("Going crazy");
+
+        float t = 0;
+
+        while (t < goatCrageTime)
         {
-            transform.position = new Vector3(Random.Range(transform.position.x - goatCragePosition, transform.position.x + goatCragePosition), transform.position.y, Random.Range(transform.position.z - goatCragePosition, transform.position.z + goatCragePosition));
-            transform.rotation = new Quaternion(Random.Range(transform.rotation.x - goatCrageRotation, transform.rotation.x + goatCrageRotation), Random.Range(transform.rotation.y - goatCrageRotation, transform.rotation.y + goatCrageRotation), Random.Range(transform.rotation.z - goatCrageRotation, transform.rotation.z + goatCrageRotation), Random.Range(transform.rotation.w - goatCrageRotation, transform.rotation.w + goatCrageRotation));
-            t += Time.deltaTime;
+            transform.position = new Vector3(
+                Random.Range(
+                    transform.position.x - goatCragePosition,
+                    transform.position.x + goatCragePosition
+                ),
+                transform.position.y,
+                transform.position.z
+            );
+
+            transform.rotation = Quaternion.Euler(
+                0,
+                0,
+                Random.Range(
+                    -goatCrageRotation * 100,
+                    goatCrageRotation * 100
+                )
+            );
+
+            t += 0.05f;
+
             yield return new WaitForSeconds(0.05f);
         }
-        transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        transform.position = spawnPoint.transform.position;
+
+        playerRb.linearVelocity = Vector2.zero;
+
+        transform.rotation = Quaternion.identity;
+
+        isRespawning = false;
     }
 }
