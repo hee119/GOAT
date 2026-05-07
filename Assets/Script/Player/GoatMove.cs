@@ -110,7 +110,7 @@ public class GoatMove : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        if (value.isPressed && IsGrounded())
+        if (value.isPressed && IsGrounded() && !isTurn && !isCrazy)
         {
             playerRb.AddForce(Vector2.up * playerJumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);

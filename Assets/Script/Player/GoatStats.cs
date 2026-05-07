@@ -9,7 +9,7 @@ public class GoatStats : MonoBehaviour
     public GameObject reSpawnButton;
     private string _lastAttackEnemyName;
     
-    [Header("Die Animation")]
+    [Header("Goat Animation")]
     public Animator animator;
 
     void Awake()
@@ -25,6 +25,7 @@ public class GoatStats : MonoBehaviour
     {
         _lastAttackEnemyName = lastAttackEnemyName;
         playerHp -= damage;
+        animator.SetBool("Hit", true);
         Debug.Log($"{_lastAttackEnemyName} is hit you");
         if (playerHp <= 0)
         {
@@ -34,6 +35,7 @@ public class GoatStats : MonoBehaviour
 
     public void Die()
     {
+        animator.SetBool("Hit", false);
         animator.SetBool("IsLived", false);
         dieText.enabled = true;
         reSpawnButton.SetActive(true);
