@@ -1215,7 +1215,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 27124573}
   goatCrageTime: 1
   goatCragePosition: 1.5
-  goatCrageRotation: 0.01
+  goatCrageRotation: 1
 --- !u!114 &1600019186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,7 +1493,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1848138929
 GameObject:

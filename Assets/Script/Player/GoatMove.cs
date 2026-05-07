@@ -95,6 +95,12 @@ public class GoatMove : MonoBehaviour
 
     IEnumerator RespawnRoutine()
     {
+        
+        transform.position = spawnPoint.transform.position;
+        playerRb.linearVelocity = playerRb.linearVelocity.normalized;
+        
+        yield return new WaitUntil(() => IsGrounded());
+
         isRespawning = true;
 
         Debug.Log("Going crazy");
@@ -103,35 +109,18 @@ public class GoatMove : MonoBehaviour
 
         while (t < goatCrageTime)
         {
-            transform.position = new Vector3(
-                Random.Range(
-                    transform.position.x - goatCragePosition,
-                    transform.position.x + goatCragePosition
-                ),
-                transform.position.y,
-                transform.position.z
-            );
+            transform.position = new Vector3(Random.Range(transform.position.x - goatCragePosition, transform.position.x + goatCragePosition), transform.position.y, transform.position.z);
 
-            transform.rotation = Quaternion.Euler(
-                0,
-                0,
-                Random.Range(
-                    -goatCrageRotation * 100,
-                    goatCrageRotation * 100
-                )
-            );
+            transform.rotation = Quaternion.Euler(Random.Range(-goatCrageRotation * 100, goatCrageRotation * 100), Random.Range(-goatCrageRotation * 100, goatCrageRotation * 100), Random.Range(-goatCrageRotation * 100, goatCrageRotation * 100));
 
             t += 0.05f;
-
             yield return new WaitForSeconds(0.05f);
         }
-
-        transform.position = spawnPoint.transform.position;
-
+        
         playerRb.linearVelocity = Vector2.zero;
 
         transform.rotation = Quaternion.identity;
-
+        
         isRespawning = false;
     }
 }
