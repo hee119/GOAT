@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-public class GoatHP : MonoBehaviour
+public class GoatStats : MonoBehaviour
 {
     public float playerMaxHp;
     public float playerHp;

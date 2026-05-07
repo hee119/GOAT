@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 533903894}
   - component: {fileID: 533903893}
   - component: {fileID: 533903897}
+  - component: {fileID: 533903898}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -554,7 +555,7 @@ Transform:
   m_GameObject: {fileID: 533903892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32035, y: 1.27812, z: 0.3839}
+  m_LocalPosition: {x: -5, y: 1.27812, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -572,7 +573,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8ca625719734e0aaddfe073cbe2e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  enemyDamage: 100
+--- !u!114 &533903898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533903892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c55ad829d40478eabebaf7f0e9cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
+  enemyScriptableObject: {fileID: 11400000, guid: c1aa6a3458150418c9dcf5b38c611ef2, type: 2}
+  enemyName: 
+  enemyMaxHp: 0
+  enemyHp: 0
+  enemyDamage: 0
+  enemySpeed: 0
 --- !u!1 &650766897
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +860,9 @@ MonoBehaviour:
   playerMaxGravityForce: 30
   fallThreshold: -10
   spawnPoint: {fileID: 27124573}
+  goatCrageTime: 1
+  goatCragePosition: 1.5
+  goatCrageRotation: 0.01
 --- !u!54 &725743527
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1410,7 +1431,6 @@ GameObject:
   - component: {fileID: 1848138932}
   - component: {fileID: 1848138931}
   - component: {fileID: 1848138935}
-  - component: {fileID: 1848138934}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -1476,19 +1496,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
---- !u!114 &1848138934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848138929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4afa82ae3200b82408d605c3dbdd1e38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineRotateWithFollowTarget
-  Damping: 0
 --- !u!114 &1848138935
 MonoBehaviour:
   m_ObjectHideFlags: 0
