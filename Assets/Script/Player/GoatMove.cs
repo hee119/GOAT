@@ -8,19 +8,28 @@ public class GoatMove : MonoBehaviour
     public float playerJumpForce;
     public float playerMaxGravityForce;
 
-    [Header("Ground Check")] public float playerJumpDistance;
+    [Header("Ground Check")] 
+    public float playerJumpDistance;
     private int groundLayer;
 
-    [Header("Fall")] public float fallThreshold;
+    [Header("Fall")] 
+    public float fallThreshold;
     public GameObject spawnPoint;
 
-    [Header("Crazy Effect")] public float goatCrageTime;
+    [Header("Crazy Effect")] 
+    public float goatCrageTime;
     public float goatCragePosition = 1.5f;
     public float goatCrageRotation = 0.1f;
 
-    [Header("Goat Animation")] public Animator animator;
+    [Header("Goat Animation")] 
+    public Animator animator;
+    
+    [Header("Goat Transform")] 
+    public Transform goatTransform;
 
     private bool isRespawning = false;
+    
+    private bool isCrazy = false;
 
     private Vector2 playerInput;
     private Rigidbody2D playerRb;
@@ -29,7 +38,9 @@ public class GoatMove : MonoBehaviour
 
     private Vector2 lastLookDirection;
 
-    private bool isTurn;
+    public bool isTurn;
+    
+    
 
     void Awake()
     {
@@ -57,7 +68,7 @@ public class GoatMove : MonoBehaviour
 
     void Move()
     {
-        if (IsGrounded() && !isTurn)
+        if (IsGrounded() && !isTurn && !isCrazy)
         {
             moveForce = new Vector2(playerInput.x * playerSpeed, 0);
             animator.SetBool("Jump", false);
@@ -95,7 +106,6 @@ public class GoatMove : MonoBehaviour
             StartCoroutine(IsTurn(-1));
         }
 
-        lastLookDirection = playerInput.normalized;
     }
 
     public void OnJump(InputValue value)
@@ -136,7 +146,9 @@ public class GoatMove : MonoBehaviour
         Debug.Log("Going crazy");
 
         float t = 0;
-
+        
+        isCrazy = true;
+        
         while (t < goatCrageTime)
         {
             transform.position =
@@ -152,6 +164,8 @@ public class GoatMove : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        isCrazy = false;
+        
         playerRb.linearVelocity = Vector2.zero;
 
         transform.rotation = Quaternion.identity;
@@ -164,20 +178,36 @@ public class GoatMove : MonoBehaviour
         isTurn = true;
 
         animator.SetFloat("Turn", dir);
+
         while (isTurn)
         {
-            float y = transform.rotation.eulerAngles.y;
+            float y = goatTransform.localEulerAngles.y;
 
-            if (dir == 1 && y >= 90)
+            // 0~360 보정
+            if (y > 180f)
+                y -= 360f;
+
+            // 오른쪽 보기
+            if (dir == 1)
             {
-                animator.SetFloat("Turn", 0);
-                isTurn = false;
+                if (y >= 89f)
+                {
+                    animator.SetFloat("Turn", 0);
+                    lastLookDirection = Vector2.right;
+                    isTurn = false;
+                }
             }
-            else if (dir == -1 && y >= 270)
+            // 왼쪽 보기
+            else if (dir == -1)
             {
-                animator.SetFloat("Turn", 0);
-                isTurn = false;
+                if (y <= -90)
+                {
+                    animator.SetFloat("Turn", 0);
+                    lastLookDirection = Vector2.left;
+                    isTurn = false;
+                }
             }
+
             yield return null;
         }
     }
